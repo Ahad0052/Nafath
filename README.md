@@ -1,3 +1,14 @@
 ﻿# Nafath Project
+
+## About
 This is a place where I share my Nafath training program journey (tasks to projects) 
-First with Problem Solving & Programming Foundations, 2nd Data Analysis & Business Intelligence, 3 Database & SQL, 4 Applied Statistics, 5 Introduction to Data Science, 6 Advanced Programming for Data Scientist, 7 Data Engineering, 8 Applied Machine & Deep Learning, 9 Generative AI
+
+## Layout
+- Problem Solving & Programming Foundations
+- Data Analysis & Business Intelligence
+- Database & SQL, 4 Applied Statistics
+- Introduction to Data Science
+- Advanced Programming for Data Scientist
+- Data Engineering
+- Applied Machine & Deep Learning
+- Generative AI
