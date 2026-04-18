@@ -6,20 +6,35 @@
 ## 📁 Repository Structure
 
 ```
-📦 bootcamp-notes/
-├── README.md                          ← You are here
-├── Week1_Python_Fundamentals.md       ← Variables, strings, conditionals, while loops
-└── Week2_Loops_Functions_Git.md       ← For loops, functions, recursion, Git workflow
+📦 repo/
+├── README.md
+│
+├── 📂 Notes by week/
+│   ├── Week1_Python_Fundamentals.md    ← Clean notes: variables, strings, conditionals, loops
+│   ├── Week2_Loops_Functions_Git.md    ← Clean notes: for loops, functions, recursion, Git
+│   └── Week3_Data_Structures_Files.md  ← Clean notes: lists, dicts, tuples, sets, files, errors
+│
+└── 📂 messy notes/                     ← Raw in-class notebooks (work in progress)
+    ├── ds-ai-c3.ipynb                  ← Class 3 notebook (original)
+    ├── ds-ai-c3-4.ipynb                ← Class 3–4 combined notebook
+    ├── week2_ds&ai-v1.ipynb            ← Week 2 draft (version 1)
+    ├── week2_ds&ai-v2.ipynb            ← Week 2 draft (version 2)
+    ├── week2_ds&ai_v2.ipynb            ← Week 2 draft (version 2 copy)
+    ├── week2_ds&ai_v3.ipynb            ← Week 2 draft (version 3)
+    └── W2HW1.py                        ← Week 2 Homework 1 (ATM system)
 ```
+
+> 💡 The **clean markdown notes** in `Notes by week/` are the organized version of the raw notebooks in `messy notes/`. Start there if you want to read or review.
 
 ---
 
 ## 📚 Weekly Progress
 
-| Week | Topics | Status |
-|------|--------|--------|
-| Week 1 | Variables, Data Types, Strings, Conditionals, Boolean Logic, While Loops | ✅ Done |
-| Week 2 | For Loops, Nested Loops, Functions, Lambda, Recursion, Git & GitHub | ✅ Done |
+| Week | Topics | Clean Notes | Raw Notebooks |
+|------|--------|-------------|---------------|
+| Week 1 | Variables, Strings, Conditionals, While Loops | ✅ | — |
+| Week 2 | For Loops, Functions, Recursion, Git | ✅ | ✅ |
+| Week 3 | Lists, Dictionaries, Tuples, Sets, Files, Error Handling | ✅ | ✅ |
 
 ---
 
@@ -44,9 +59,16 @@
 - Recursion (factorial, sum, fibonacci)
 - `split()`, `map()`, regex intro
 
----
+### Week 3
+- Lists — creating, indexing, slicing, methods (`.append()`, `.insert()`, `.pop()`, `.remove()`)
+- Searching — linear search O(n), binary search O(log n)
+- Dictionaries — key-value pairs, `.items()`, `.keys()`, `.values()`, nested dicts
+- Tuples — immutable sequences, `.count()`, `.index()`
+- Sets — unique elements, `set()` vs `{}`
+- Files — `open()`, `.readline()`, `.readlines()`, `.read()`, `.write()`, modes `r/w/a`
+- Error handling — `try / except / finally`, `raise`, input validation loops
 
-## 🚀 Goals
+---
 - Build solid Python foundations
 - Practice Git & GitHub habits early
 - Work toward Computer Vision and Kaggle projects
