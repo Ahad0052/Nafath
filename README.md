@@ -12,23 +12,22 @@
 ├── 📂 Notes by week/
 │   ├── Week1_Python_Fundamentals.md    ← Clean notes: variables, strings, conditionals, loops
 │   ├── Week2_Loops_Functions_Git.md    ← Clean notes: for loops, functions, recursion, Git
-│   └── Week3_Data_Structures_Files.md  ← Clean notes: lists, dicts, tuples, sets, files, errors
+│   ├── Week3_Data_Structures_Files.md  ← Clean notes: lists, dicts, tuples, sets, files, errors
+│   └── Week4_NumPy_Pandas_Visualization.md ← NumPy, Pandas, Matplotlib, Seaborn, IQR
 │
-└── 📂 messy notes/                     ← Raw in-class notebooks (work in progress)
-
+└── 📂 messy notes/   ← raw in-class notebooks (updated daily)
 ```
-
-> 💡 The **clean markdown notes** in `Notes by week/` are the organized version of the raw notebooks in `messy notes/`. Start there if you want to read or review.
 
 ---
 
 ## 📚 Weekly Progress
 
-| Week | Topics | Clean Notes |
-|------|--------|-------------|
+| Week | Topics | Status |
+|------|--------|--------|
 | Week 1 | Variables, Strings, Conditionals, While Loops | ✅ |
 | Week 2 | For Loops, Functions, Recursion, Git | ✅ |
-| Week 3 | Lists, Dictionaries, Tuples, Sets, Files, Error Handling | ✅ | 
+| Week 3 | Lists, Dictionaries, Tuples, Sets, Files, Error Handling | ✅ |
+| Week 4 | NumPy, Pandas, Matplotlib, Seaborn, Outlier Detection | ✅ |
 
 ---
 
@@ -62,7 +61,16 @@
 - Files — `open()`, `.readline()`, `.readlines()`, `.read()`, `.write()`, modes `r/w/a`
 - Error handling — `try / except / finally`, `raise`, input validation loops
 
+### Week 4
+- NumPy — arrays, slicing, broadcasting, `np.where()`, math, random, statistics
+- Pandas — Series, DataFrame, `iloc`/`loc`, filtering, groupby, encoding, datetime
+- Matplotlib — line, bar, histogram, scatter, pie, box plots
+- Seaborn — heatmaps, violin plots, bubble charts
+- Outlier detection & removal using IQR method
+
 ---
+
+## 🚀 Goals
 - Build solid Python foundations
 - Practice Git & GitHub habits early
 - Work toward Computer Vision and Kaggle projects
