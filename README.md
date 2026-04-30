@@ -14,6 +14,7 @@
 │   ├── Week2_Loops_Functions_Git.md    ← Clean notes: for loops, functions, recursion, Git
 │   ├── Week3_Data_Structures_Files.md  ← Clean notes: lists, dicts, tuples, sets, files, errors
 │   └── Week4_NumPy_Pandas_Visualization.md ← NumPy, Pandas, Matplotlib, Seaborn, IQR
+│   └── Week5_AdvPandas_Plotly_Dash_DB.md   ← Advanced Pandas, Plotly, Dash, Altair, DB & ERD
 │
 └── 📂 messy notes/   ← raw in-class notebooks (updated daily)
 ```
@@ -28,6 +29,7 @@
 | Week 2 | For Loops, Functions, Recursion, Git | ✅ |
 | Week 3 | Lists, Dictionaries, Tuples, Sets, Files, Error Handling | ✅ |
 | Week 4 | NumPy, Pandas, Matplotlib, Seaborn, Outlier Detection | ✅ |
+| Week 5 | Advanced Pandas, Plotly, Dash, Altair, Database Design & ERD | ✅ |
 
 ---
 
@@ -68,9 +70,21 @@
 - Seaborn — heatmaps, violin plots, bubble charts
 - Outlier detection & removal using IQR method
 
----
+### Week 5
+- Geographic maps with Basemap (bubble size = data value)
+- Multi-index DataFrames — `loc` with tuples, `slice(None)` as wildcard
+- `pd.merge()` vs `.join()` — inner, left, right, outer, cross
+- `df.query()` — SQL-like filtering
+- `pd.cut()` vs `pd.qcut()` — binning strategies
+- Plotly Express — scatter, bar, line charts with hover & interactivity
+- Plotly animations — `animation_frame`, `animation_group`
+- Dash — building reactive web dashboards with `@app.callback`
+- Altair — declarative chart grammar
+- DBMS concepts — define, construct, manipulate, maintain
+- Database design process — requirements → conceptual → logical → physical
+- ERD — entities, attributes, relationships, cardinality, keys
 
-## 🚀 Goals
+---
 - Build solid Python foundations
 - Practice Git & GitHub habits early
 - Work toward Computer Vision and Kaggle projects
