@@ -1,0 +1,24 @@
+CREATE DATABASE MOVIE1;
+USE MOVIE1;
+
+CREATE TABLE PRODUCTION (
+  P_ID INT PRIMARY KEY,
+  PNAME VARCHAR(50),
+  ADDRESS VARCHAR(100)
+);
+describe production;
+
+
+CREATE TABLE Moviec (
+  M_ID INT PRIMARY KEY,
+  actor_ID VARCHAR(50) ,
+  rol VARCHAR(100),
+  PID INT,
+  status1 VARCHAR(20) DEFAULT 'active'
+);
+
+ALTER TABLE Moviec 
+ADD FOREIGN KEY (P_ID) REFERENCES prod(ActorP_ID),
+DROP COLUMN PID;
+describe Moviec;
+RENAME TABLE productionnew TO prod;
