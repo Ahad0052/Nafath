@@ -110,6 +110,10 @@ INSERT INTO actor
 values (201,36,"michiel",'1999-09-11');
 select * from actor;
 
+INSERT INTO actor
+values (202,30,"s",'1999-09-11');
+select * from actor;
+
 INSERT INTO director
 values (300,"steve",'1967-01-11','direct only'),
 (301,"donald",'1979-11-14','direct only');
@@ -143,4 +147,20 @@ select * from movie_gener;
 insert into quots
 values(200,500,"hello world"),
 (201,501,"hi");
-select * from quots
+select * from quots;
+
+update actor 
+set age = 5
+where actor_id = 200;
+
+select * from actor;
+
+update actor
+set name1= 'someone'
+where name1 in('s');
+select * from actor;
+
+update actor
+set age = 4
+where agn 30;
+select * from actor;
