@@ -156,11 +156,21 @@ where actor_id = 200;
 select * from actor;
 
 update actor
-set name1= 'someone'
-where name1 in('s');
+set name1 = 'someone'
+where actor_id in (202);
 select * from actor;
+
+use movie_db1;
 
 update actor
 set age = 4
-where agn 30;
+where age in (30);
 select * from actor;
+
+select p_id,pname from prod;
+
+select p_id as prod_ID from prod;
+select * from prod;
+
+select name1,age + 5 as  newage from actor;
+
