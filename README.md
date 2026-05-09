@@ -10,11 +10,12 @@
 ├── README.md
 │
 ├── 📂 Notes by week/
-│   ├── Week1_Python_Fundamentals.md    ← Clean notes: variables, strings, conditionals, loops
-│   ├── Week2_Loops_Functions_Git.md    ← Clean notes: for loops, functions, recursion, Git
-│   ├── Week3_Data_Structures_Files.md  ← Clean notes: lists, dicts, tuples, sets, files, errors
-│   └── Week4_NumPy_Pandas_Visualization.md ← NumPy, Pandas, Matplotlib, Seaborn, IQR
-│   └── Week5_AdvPandas_Plotly_Dash_DB.md   ← Advanced Pandas, Plotly, Dash, Altair, DB & ERD
+│   ├── Week1_Python_Fundamentals.md         ← Variables, strings, conditionals, loops
+│   ├── Week2_Loops_Functions_Git.md         ← For loops, functions, recursion, Git
+│   ├── Week3_Data_Structures_Files.md       ← Lists, dicts, tuples, sets, files, errors
+│   ├── Week4_NumPy_Pandas_Visualization.md  ← NumPy, Pandas, Matplotlib, Seaborn, IQR
+│   ├── Week5_AdvPandas_Plotly_Dash_DB.md    ← Advanced Pandas, Plotly, Dash, Altair, DB & ERD
+│   └── Week6_SQL_DatabaseDesign_Normalization.md ← SQL, Normalization, Subqueries, Joins
 │
 └── 📂 messy notes/   ← raw in-class notebooks (updated daily)
 ```
@@ -30,6 +31,7 @@
 | Week 3 | Lists, Dictionaries, Tuples, Sets, Files, Error Handling | ✅ |
 | Week 4 | NumPy, Pandas, Matplotlib, Seaborn, Outlier Detection | ✅ |
 | Week 5 | Advanced Pandas, Plotly, Dash, Altair, Database Design & ERD | ✅ |
+| Week 6 | SQL (DDL/DML/DCL/TCL), Normalization, Subqueries, JOINs | ✅ |
 
 ---
 
@@ -82,13 +84,28 @@
 - Altair — declarative chart grammar
 - DBMS concepts — define, construct, manipulate, maintain
 - Database design process — requirements → conceptual → logical → physical
-- ERD — entities, attributes, relationships, cardinality, keys
+- ERD — entities, attributes, relationships, cardinality, and keys
+
+### Week 6
+- SQL language categories — DDL, DML, DCL, TCL and when to use each
+- Normal forms — 1NF (one value per cell), 2NF (no partial dependency), 3NF (no transitive dependency)
+- DDL commands — `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME`
+- DML commands — `INSERT`, `UPDATE`, `DELETE`, `SELECT` with `WHERE`, `ORDER BY`, `LIMIT`, `DISTINCT`
+- Constraints — `PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `CHECK`, `DEFAULT`, `NOT NULL`, `AUTO_INCREMENT`
+- `ENUM` vs `SET` — single-choice vs multi-choice column types
+- Subqueries — `IN`, `NOT IN`, `ANY`, `ALL`, `EXISTS`
+- Aggregate functions — `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`
+- JOINs — `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`
+- Views — virtual tables derived from queries
+- `ON DELETE CASCADE` — cascading deletes through foreign key relationships
+- Mail Order database project — SRS writing + ERD design
 
 ---
+
 - Build solid Python foundations
 - Practice Git & GitHub habits early
 - Work toward Computer Vision and Kaggle projects
 
 ---
 
-*Last updated: April 2026*
+*Last updated: May 2026*
