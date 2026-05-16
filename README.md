@@ -10,12 +10,21 @@
 ├── README.md
 │
 ├── 📂 Notes by week/
-│   ├── Week1_Python_Fundamentals.md         ← Variables, strings, conditionals, loops
-│   ├── Week2_Loops_Functions_Git.md         ← For loops, functions, recursion, Git
-│   ├── Week3_Data_Structures_Files.md       ← Lists, dicts, tuples, sets, files, errors
-│   ├── Week4_NumPy_Pandas_Visualization.md  ← NumPy, Pandas, Matplotlib, Seaborn, IQR
-│   ├── Week5_AdvPandas_Plotly_Dash_DB.md    ← Advanced Pandas, Plotly, Dash, Altair, DB & ERD
-│   └── Week6_SQL_DatabaseDesign_Normalization.md ← SQL, Normalization, Subqueries, Joins
+│   ├── Week1_Python_Fundamentals.md              ← Variables, strings, conditionals, loops
+│   ├── Week2_Loops_Functions_Git.md              ← For loops, functions, recursion, Git
+│   ├── Week3_Data_Structures_Files.md            ← Lists, dicts, tuples, sets, files, errors
+│   ├── Week4_NumPy_Pandas_Visualization.md       ← NumPy, Pandas, Matplotlib, Seaborn, IQR
+│   ├── Week5_AdvPandas_Plotly_Dash_DB.md         ← Advanced Pandas, Plotly, Dash, Altair, DB & ERD
+│   ├── Week6_SQL_DatabaseDesign_Normalization.md ← SQL, Normalization, Subqueries, JOINs
+│   └── Week7_DBProject_PowerBI.md                ← DB Project delivery, SRS, Power BI intro
+│
+├── 📂 Projects/
+│   └── FRMS/                                     ← Food Recipes Management System
+│       ├── RecipeSRS_V1_0.pdf                    ← Software Requirements Specification
+│       ├── frms_schema.sql                       ← Full MySQL schema
+│       ├── frms_data.sql                         ← Synthetic dataset
+│       ├── frms_queries.sql                      ← Key SQL queries
+│       └── w7.pbix                               ← Power BI dashboard
 │
 └── 📂 messy notes/   ← raw in-class notebooks (updated daily)
 ```
@@ -32,6 +41,7 @@
 | Week 4 | NumPy, Pandas, Matplotlib, Seaborn, Outlier Detection | ✅ |
 | Week 5 | Advanced Pandas, Plotly, Dash, Altair, Database Design & ERD | ✅ |
 | Week 6 | SQL (DDL/DML/DCL/TCL), Normalization, Subqueries, JOINs | ✅ |
+| Week 7 | DB Project Delivery (FRMS), SRS Writing, Power BI | ✅ |
 
 ---
 
@@ -88,7 +98,7 @@
 
 ### Week 6
 - SQL language categories — DDL, DML, DCL, TCL and when to use each
-- Normal forms — 1NF (one value per cell), 2NF (no partial dependency), 3NF (no transitive dependency)
+- Normal forms — 1NF, 2NF, 3NF
 - DDL commands — `CREATE`, `ALTER`, `DROP`, `TRUNCATE`, `RENAME`
 - DML commands — `INSERT`, `UPDATE`, `DELETE`, `SELECT` with `WHERE`, `ORDER BY`, `LIMIT`, `DISTINCT`
 - Constraints — `PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `CHECK`, `DEFAULT`, `NOT NULL`, `AUTO_INCREMENT`
@@ -98,7 +108,16 @@
 - JOINs — `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`
 - Views — virtual tables derived from queries
 - `ON DELETE CASCADE` — cascading deletes through foreign key relationships
-- Mail Order database project — SRS writing + ERD design
+
+### Week 7
+- SRS writing — purpose, scope, functional & non-functional requirements, timeline, financial plan
+- Food Recipes Management System (FRMS) — full project from SRS to deployed DB
+- ERD design — RECIPE, CHEF, INGREDIENT, NUTRITION, CATEGORY, MEAL + junction tables
+- 3NF normalization applied to a real project schema
+- Power BI Desktop — connecting to MySQL, Power Query transformations
+- DAX basics — `COUNT`, `AVERAGE`, `SUM`, `FILTER`, `CALCULATE`
+- Data model relationships in Power BI — mirroring SQL foreign keys
+- Building an interactive recipe dashboard with KPI cards, bar charts, and slicers
 
 ---
 
