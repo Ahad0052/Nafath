@@ -16,15 +16,19 @@
 │   ├── Week4_NumPy_Pandas_Visualization.md       ← NumPy, Pandas, Matplotlib, Seaborn, IQR
 │   ├── Week5_AdvPandas_Plotly_Dash_DB.md         ← Advanced Pandas, Plotly, Dash, Altair, DB & ERD
 │   ├── Week6_SQL_DatabaseDesign_Normalization.md ← SQL, Normalization, Subqueries, JOINs
-│   └── Week7_DBProject_PowerBI.md                ← DB Project delivery, SRS, Power BI intro
+│   ├── Week7_DBProject_PowerBI.md                ← DB Project delivery (FRMS), Power BI intro
+│   └── Week8_PowerBI_TalabatDashboard.md         ← Power BI project: Talabat Operations Dashboard
 │
 ├── 📂 Projects/
-│   └── FRMS/                                     ← Food Recipes Management System
-│       ├── RecipeSRS_V1_0.pdf                    ← Software Requirements Specification
-│       ├── frms_schema.sql                       ← Full MySQL schema
-│       ├── frms_data.sql                         ← Synthetic dataset
-│       ├── frms_queries.sql                      ← Key SQL queries
-│       └── w7.pbix                               ← Power BI dashboard
+│   ├── FRMS/                                     ← Food Recipes Management System (Week 7)
+│   │   ├── RecipeSRS_V1_0.pdf
+│   │   ├── frms_schema.sql
+│   │   ├── frms_data.sql
+│   │   └── frms_queries.sql
+│   │
+│   └── Talabat_Dashboard/                        ← Talabat Operations Dashboard (Week 8)
+│       ├── TalabatSRS_V1_0.pdf
+│       └── talabat_dashboard.pbix
 │
 └── 📂 messy notes/   ← raw in-class notebooks (updated daily)
 ```
@@ -41,7 +45,8 @@
 | Week 4 | NumPy, Pandas, Matplotlib, Seaborn, Outlier Detection | ✅ |
 | Week 5 | Advanced Pandas, Plotly, Dash, Altair, Database Design & ERD | ✅ |
 | Week 6 | SQL (DDL/DML/DCL/TCL), Normalization, Subqueries, JOINs | ✅ |
-| Week 7 | DB Project Delivery (FRMS), SRS Writing, Power BI | ✅ |
+| Week 7 | DB Project Delivery (FRMS), SRS Writing, Power BI Intro | ✅ |
+| Week 8 | Power BI Project: Talabat Operations Dashboard (100K rows, 25 DAX measures, 6 pages) | ✅ |
 
 ---
 
@@ -114,10 +119,25 @@
 - Food Recipes Management System (FRMS) — full project from SRS to deployed DB
 - ERD design — RECIPE, CHEF, INGREDIENT, NUTRITION, CATEGORY, MEAL + junction tables
 - 3NF normalization applied to a real project schema
-- Power BI Desktop — connecting to MySQL, Power Query transformations
+- Power BI Desktop — connecting to data, Power Query transformations
 - DAX basics — `COUNT`, `AVERAGE`, `SUM`, `FILTER`, `CALCULATE`
 - Data model relationships in Power BI — mirroring SQL foreign keys
-- Building an interactive recipe dashboard with KPI cards, bar charts, and slicers
+- Visual types: cards, bar charts, donut charts, slicers, cross-filtering
+
+### Week 8
+- Full Power BI project lifecycle — SRS → data audit → Power Query → DAX → 6-page dashboard → presentation
+- Dataset audit — identifying and documenting data quality issues before writing any DAX
+- Data fixes — `VALUE()` for text-to-number conversion, `FORMAT()` calculated column for empty `Day_of_Week`
+- 25 DAX measures across 7 display folders: aggregations, filters, rates, per-unit, time, traffic, targets
+- DAX functions: `COUNTROWS`, `SUM`, `AVERAGE`, `DISTINCTCOUNT`, `CALCULATE`, `AVERAGEX`, `FILTER`, `DIVIDE`, `DATEDIFF`, `VALUE`, `FORMAT`
+- `CALCULATE()` — modifying filter context (most important DAX function)
+- `DIVIDE()` — safe division, always use instead of `/`
+- `AVERAGEX()` + `FILTER()` — row-by-row iteration on filtered subsets
+- 6 dashboard pages: Executive Overview, Delivery Performance, Revenue & Orders, Restaurant & Menu, Operations & Traffic, Customer Behaviour
+- Map visual using latitude/longitude columns
+- Gauge visual with target value
+- Display folders — organizing 25+ measures to keep the field list clean
+- Key business insights from 100,000 real-world food delivery records
 
 ---
 
