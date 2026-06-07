@@ -17,7 +17,8 @@
 │   ├── Week5_AdvPandas_Plotly_Dash_DB.md         ← Advanced Pandas, Plotly, Dash, Altair, DB & ERD
 │   ├── Week6_SQL_DatabaseDesign_Normalization.md ← SQL, Normalization, Subqueries, JOINs
 │   ├── Week7_DBProject_PowerBI.md                ← DB Project delivery (FRMS), Power BI intro
-│   └── Week8_PowerBI_TalabatDashboard.md         ← Power BI project: Talabat Operations Dashboard
+│   ├── Week8_PowerBI_TalabatDashboard.md         ← Power BI project: Talabat Operations Dashboard
+│   └── Week10_Statistics_WebScraping.md          ← Statistics for AI + Selenium web scraping
 │
 ├── 📂 Projects/
 │   ├── FRMS/                                     ← Food Recipes Management System (Week 7)
@@ -26,9 +27,15 @@
 │   │   ├── frms_data.sql
 │   │   └── frms_queries.sql
 │   │
-│   └── Talabat_Dashboard/                        ← Talabat Operations Dashboard (Week 8)
-│       ├── TalabatSRS_V1_0.pdf
-│       └── talabat_dashboard.pbix
+│   ├── Talabat_Dashboard/                        ← Talabat Operations Dashboard (Week 8)
+│   │   ├── TalabatSRS_V1_0.pdf
+│   │   └── talabat_dashboard.pbix
+│   │
+│   └── TimesOfOman_Scraper/                      ← News Scraper — Times of Oman (Week 10)
+│       ├── scraper_v1.ipynb                      ← Single-page scraper
+│       ├── scraper_v2.ipynb                      ← Multi-page with pagination
+│       ├── scraper_v3.ipynb                      ← 1,000-article target scraper (headless)
+│       └── times_of_oman_1000_news.csv           ← Output dataset
 │
 └── 📂 messy notes/   ← raw in-class notebooks (updated daily)
 ```
@@ -47,6 +54,7 @@
 | Week 6 | SQL (DDL/DML/DCL/TCL), Normalization, Subqueries, JOINs | ✅ |
 | Week 7 | DB Project Delivery (FRMS), SRS Writing, Power BI Intro | ✅ |
 | Week 8 | Power BI Project: Talabat Operations Dashboard (100K rows, 25 DAX measures, 6 pages) | ✅ |
+| Week 10 | Statistics for AI (probability, regression, hypothesis testing) + Selenium web scraping | ✅ |
 
 ---
 
@@ -134,10 +142,22 @@
 - `DIVIDE()` — safe division, always use instead of `/`
 - `AVERAGEX()` + `FILTER()` — row-by-row iteration on filtered subsets
 - 6 dashboard pages: Executive Overview, Delivery Performance, Revenue & Orders, Restaurant & Menu, Operations & Traffic, Customer Behaviour
-- Map visual using latitude/longitude columns
-- Gauge visual with target value
-- Display folders — organizing 25+ measures to keep the field list clean
 - Key business insights from 100,000 real-world food delivery records
+
+### Week 10
+- Descriptive statistics — mean, median, mode, std, variance, IQR using NumPy and Pandas
+- Probability — basic rules, conditional probability, Bayes' theorem
+- Permutations vs combinations — when order matters vs doesn't, `factorial()`, `comb()`
+- Distributions & sampling — normal distribution, z-scores, Central Limit Theorem, sampling methods
+- Confidence intervals — formula, z-scores for 95%/99%, computing with `scipy.stats.t.interval()`
+- Hypothesis testing — H₀ vs H₁, p-value, significance level α, t-tests, Type I & II errors
+- Linear regression — slope/intercept, R², MSE, RMSE, assumptions, `sklearn.linear_model.LinearRegression`
+- Logistic regression — sigmoid function, binary classification, precision/recall/F1, confusion matrix
+- Web scraping with Selenium — `webdriver`, `By` locators, `WebDriverWait`, explicit waits
+- Two-phase scraping architecture — Phase 1: collect links, Phase 2: deep scrape each article
+- Headless Chrome — faster scraping without a visible browser window
+- Progressive CSV saving — write row-by-row to prevent data loss on crash
+- Times of Oman news scraper — scraped 1,000+ Oman news articles (title, description, image, URL)
 
 ---
 
@@ -147,4 +167,4 @@
 
 ---
 
-*Last updated: May 2026*
+*Last updated: June 2026*
