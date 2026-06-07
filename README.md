@@ -6,38 +6,19 @@
 ## 📁 Repository Structure
 
 ```
-📦 repo/
+📦 Nafath/
 ├── README.md
 │
-├── 📂 Notes by week/
-│   ├── Week1_Python_Fundamentals.md              ← Variables, strings, conditionals, loops
-│   ├── Week2_Loops_Functions_Git.md              ← For loops, functions, recursion, Git
-│   ├── Week3_Data_Structures_Files.md            ← Lists, dicts, tuples, sets, files, errors
-│   ├── Week4_NumPy_Pandas_Visualization.md       ← NumPy, Pandas, Matplotlib, Seaborn, IQR
-│   ├── Week5_AdvPandas_Plotly_Dash_DB.md         ← Advanced Pandas, Plotly, Dash, Altair, DB & ERD
-│   ├── Week6_SQL_DatabaseDesign_Normalization.md ← SQL, Normalization, Subqueries, JOINs
-│   ├── Week7_DBProject_PowerBI.md                ← DB Project delivery (FRMS), Power BI intro
-│   ├── Week8_PowerBI_TalabatDashboard.md         ← Power BI project: Talabat Operations Dashboard
-│   └── Week10_Statistics_WebScraping.md          ← Statistics for AI + Selenium web scraping
-│
-├── 📂 Projects/
-│   ├── FRMS/                                     ← Food Recipes Management System (Week 7)
-│   │   ├── RecipeSRS_V1_0.pdf
-│   │   ├── frms_schema.sql
-│   │   ├── frms_data.sql
-│   │   └── frms_queries.sql
-│   │
-│   ├── Talabat_Dashboard/                        ← Talabat Operations Dashboard (Week 8)
-│   │   ├── TalabatSRS_V1_0.pdf
-│   │   └── talabat_dashboard.pbix
-│   │
-│   └── TimesOfOman_Scraper/                      ← News Scraper — Times of Oman (Week 10)
-│       ├── scraper_v1.ipynb                      ← Single-page scraper
-│       ├── scraper_v2.ipynb                      ← Multi-page with pagination
-│       ├── scraper_v3.ipynb                      ← 1,000-article target scraper (headless)
-│       └── times_of_oman_1000_news.csv           ← Output dataset
-│
-└── 📂 messy notes/   ← raw in-class notebooks (updated daily)
+└── 📂 Notes by week/
+    ├── Week1_Python_Fundamentals.md
+    ├── Week2_Loops_Functions_Git.md
+    ├── Week3_Data_Structures_Files.md
+    ├── Week4_NumPy_Pandas_Visualization.md
+    ├── Week5_AdvPandas_Plotly_Dash_DB.md
+    ├── Week6_SQL_DatabaseDesign_Normalization.md
+    ├── Week7_DBProject_PowerBI.md
+    ├── Week8_PowerBI_TalabatDashboard.md
+    └── Week10_Statistics_WebScraping.md
 ```
 
 ---
