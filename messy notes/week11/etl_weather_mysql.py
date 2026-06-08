@@ -32,7 +32,7 @@ from sqlalchemy.exc import SQLAlchemyError
 # ============================================================
 # CONFIG — update your API key and cities here
 # ============================================================
-API_KEY = "0e1c8d13e239eec0f772c626df2fea99"   # <- paste your key from openweathermap.org/api_keys
+API_KEY = ""   # <- paste your key from openweathermap.org/api_keys
 
 CITIES = [
     "Muscat",
