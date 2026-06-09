@@ -23,7 +23,7 @@ from mysql.connector import Error
 DB_CONFIG = {
     "host":     "localhost",
     "user":     "root",
-    "password": "Q)(RZ5t9",
+    "password": "",
     "database": "store_sales_db",
 }
 
