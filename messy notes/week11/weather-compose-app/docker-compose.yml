@@ -1,0 +1,21 @@
+services:
+
+  weather-backend:
+    build: ./backend
+    container_name: weather-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    
+
+  weather-frontend:
+    build: ./frontend
+    container_name: weather-frontend
+    ports:
+      - "8501:8501"
+    environment:
+      BACKEND_URL: http://weather-backend:5000
+    depends_on:
+      - weather-backend
+    
