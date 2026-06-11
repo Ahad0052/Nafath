@@ -18,7 +18,8 @@
     ├── Week6_SQL_DatabaseDesign_Normalization.md
     ├── Week7_DBProject_PowerBI.md
     ├── Week8_PowerBI_TalabatDashboard.md
-    └── Week10_Statistics_WebScraping.md
+    ├── Week10_Statistics_WebScraping.md
+    └── Week11_ETL_Docker_Prefect.md
 ```
 
 ---
@@ -36,6 +37,7 @@
 | Week 7 | DB Project Delivery (FRMS), SRS Writing, Power BI Intro | ✅ |
 | Week 8 | Power BI Project: Talabat Operations Dashboard (100K rows, 25 DAX measures, 6 pages) | ✅ |
 | Week 10 | Statistics for AI (probability, regression, hypothesis testing) + Selenium web scraping | ✅ |
+| Week 11 | ETL Pipelines, Docker, Docker Compose, Prefect orchestration | ✅ |
 
 ---
 
@@ -139,6 +141,22 @@
 - Headless Chrome — faster scraping without a visible browser window
 - Progressive CSV saving — write row-by-row to prevent data loss on crash
 - Times of Oman news scraper — scraped 1,000+ Oman news articles (title, description, image, URL)
+
+### Week 11
+- ETL pipeline architecture — Extract → Transform → Load as three separated, testable modules
+- Store Sales ETL — merged 3 messy CSV files, cleaned data quality issues, loaded star schema into MySQL
+- Data cleaning — per-group median imputation, junk value removal, type conversion, currency normalisation (USD → OMR)
+- Star schema design — fact table (`sales`) + dimension tables (`store`, `customer`, `product`)
+- Weather ETL (basic) — OpenWeatherMap API → transform → append to CSV, config via `.env`
+- Dockerfile — `FROM`, `WORKDIR`, `COPY`, `RUN`, `EXPOSE`, `CMD`
+- Docker build & run — `docker build`, `docker run`, `--env-file`
+- Docker Compose — multi-container app with Flask backend + Streamlit frontend
+- `docker-compose.yml` — services, ports, env_file, environment, depends_on
+- Flask API — `@app.route`, `request.args.get`, `jsonify`, `host="0.0.0.0"` for Docker
+- Streamlit frontend — `st.text_input`, `st.button`, `st.spinner`, calling a backend via `requests`
+- Prefect orchestration — `@task` and `@flow` decorators, retries, Prefect UI
+- Gold price ETL with Prefect — goldapi.io → transform → CSV + MySQL, full `@flow` with four `@task` steps
+- `python-dotenv` — `load_dotenv(override=True)`, `os.getenv()` — never hardcode credentials
 
 ---
 
