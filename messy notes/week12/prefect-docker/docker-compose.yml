@@ -1,0 +1,54 @@
+services:
+
+  prefect-server:
+    image: prefecthq/prefect:3-latest
+    command: prefect server start --host 0.0.0.0
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/debug:rw
+    healthcheck:
+      test: ["CMD", "python", "/debug/debug_healthcheck.py"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 90s
+
+  worker:
+    image: prefecthq/prefect:3-latest
+    command: >
+      sh -c "prefect work-pool create default --type process 2>/dev/null || true
+      && prefect worker start --pool default"
+    depends_on:
+      prefect-server:
+        condition: service_healthy
+    environment:
+      - PREFECT_API_URL=http://prefect-server:4200/api
+
+  mysql:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: "golddb"
+    ports:
+      - "3308:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 90s
+
+  app:
+    build: .
+    depends_on:
+      prefect-server:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+    environment:
+      - PREFECT_API_URL=http://prefect-server:4200/api
+    volumes:
+      - ./data:/app/data
+      - .:/debug:rw

@@ -1,0 +1,8 @@
+version: '3.9'
+
+services:
+  telecom-pipeline:
+    build: .
+    container_name: telecom_pipeline
+    volumes:
+      - .:/app
