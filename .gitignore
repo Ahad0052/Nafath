@@ -1,0 +1,80 @@
+# ==========================================
+# Virtual Environments & Secrets
+# ==========================================
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+secrets.json
+
+# ==========================================
+# Data, Models, & Cache (Crucial for your repo!)
+# ==========================================
+# Ignores large datasets to prevent GitHub limits
+*.csv
+*.tsv
+*.dat
+*.json
+*.pkl
+*.h5
+*.parquet
+*.sqlite
+*.db
+
+# Ignore local cache folders
+cache/
+.cache/
+
+# ==========================================
+# Python & Compiled Files
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==========================================
+# Jupyter Notebooks
+# ==========================================
+.ipynb_checkpoints/
+ipython_config.py
+
+# ==========================================
+# IDEs & Editor configs (VS Code, PyCharm, etc.)
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================================
+# OS Generated Files (Windows / Mac)
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+ehthumbs_vista.db
+[Tt]humbs.db
