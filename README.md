@@ -19,7 +19,8 @@
     ├── Week7_DBProject_PowerBI.md
     ├── Week8_PowerBI_TalabatDashboard.md
     ├── Week10_Statistics_WebScraping.md
-    └── Week11_ETL_Docker_Prefect.md
+    ├── Week11_ETL_Docker_Prefect.md
+    └── Week12_Airflow_Prefect_ETL.md
 ```
 
 ---
@@ -38,6 +39,7 @@
 | Week 8 | Power BI Project: Talabat Operations Dashboard (100K rows, 25 DAX measures, 6 pages) | ✅ |
 | Week 10 | Statistics for AI (probability, regression, hypothesis testing) + Selenium web scraping | ✅ |
 | Week 11 | ETL Pipelines, Docker, Docker Compose, Prefect orchestration | ✅ |
+| Week 12 | Apache Airflow, Prefect + Docker, TRA Telecom Analytics Pipeline | ✅ |
 
 ---
 
@@ -157,6 +159,24 @@
 - Prefect orchestration — `@task` and `@flow` decorators, retries, Prefect UI
 - Gold price ETL with Prefect — goldapi.io → transform → CSV + MySQL, full `@flow` with four `@task` steps
 - `python-dotenv` — `load_dotenv(override=True)`, `os.getenv()` — never hardcode credentials
+
+### Week 12
+- Apache Airflow — DAGs, `PythonOperator`, task dependencies with `>>`, DAG parameters
+- Airflow scheduling — `schedule="@hourly"`, `catchup=False`, `start_date`
+- XCom — `ti.xcom_push()` / `ti.xcom_pull()` for passing data between Airflow tasks
+- Airflow + Docker Compose — `apache/airflow:3.0.4`, `command: standalone`, DAGs volume mount
+- `condition: service_healthy` — healthcheck-gated container startup in Docker Compose
+- Prefect + Docker Compose — `prefecthq/prefect:3-latest`, worker pool, 4-service architecture
+- `gold_pipeline.serve(cron="*/2 * * * *")` — scheduling a Prefect flow from code
+- Startup race condition — polling `api/health` endpoint before calling `.serve()`
+- Gold price ETL with Airflow — goldapi.io → XCom → CSV + MySQL, hourly DAG
+- Gold price ETL with Prefect + Docker — same pipeline, live Prefect server + worker + MySQL
+- Timestamp normalisation — handling None / Unix ms / Unix s / ISO string from the same API field
+- TRA Telecom Analytics Pipeline — Prefect + SQLite processing official TRA Oman labor force data
+- Derived metrics — `pct_change()` for growth rate, Omanization rate, expat ratio
+- Arabic sheet names — `pd.read_excel(sheet_name="التوظيف")` works natively in pandas
+- Two SQLite tables — `raw_telecom_data` (original) + `telecom_analytics` (with derived columns)
+- Airflow vs Prefect — DAG/flow, XCom/return values, setup complexity, best use cases
 
 ---
 

@@ -1,0 +1,8 @@
+services:
+  telecom-pipeline:
+    build: .
+    container_name: telecom_pipeline
+    environment:
+      PREFECT_SERVER_EPHEMERAL_STARTUP_TIMEOUT_SECONDS: "120"
+    volumes:
+      - .:/app

@@ -6,7 +6,7 @@ import os
 from datetime import datetime
 
 
-API_KEY = ""
+API_KEY = os.getenv("GOLD_API_KEY", "")
 
 
 
@@ -102,10 +102,10 @@ def load_to_mysql(record):
 
 
     conn = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="",
-        database="gold_db"
+        host=os.getenv("MYSQL_HOST", "localhost"),
+        user=os.getenv("MYSQL_USER", "root"),
+        password=os.getenv("MYSQL_PASSWORD", ""),
+        database=os.getenv("MYSQL_DATABASE", "gold_db")
     )
 
 

@@ -1,0 +1,6 @@
+prefect
+pandas
+openpyxl
+sqlalchemy
+griffe
+pymysql

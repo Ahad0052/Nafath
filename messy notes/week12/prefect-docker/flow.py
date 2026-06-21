@@ -91,10 +91,10 @@ def load_to_mysql(record):
     # #endregion
     try:
         conn = mysql.connector.connect(
-            host="mysql",
-            user="root",
-            password="root",
-            database="golddb"
+            host=os.getenv("MYSQL_HOST", "mysql"),
+            user=os.getenv("MYSQL_USER", "root"),
+            password=os.getenv("MYSQL_PASSWORD"),
+            database=os.getenv("MYSQL_DATABASE", "golddb")
         )
     except mysql.connector.Error as exc:
         # #region agent log

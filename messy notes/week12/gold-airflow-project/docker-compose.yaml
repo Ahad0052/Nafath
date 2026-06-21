@@ -1,0 +1,51 @@
+services:
+
+  airflow:
+    build: .
+    container_name: airflow
+
+    ports:
+      - "8080:8080"
+
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+
+    environment:
+      GOLD_API_KEY: goldapi-411b0f64f209745aedb744cd000c1b5f-io
+      MYSQL_URL: mysql+pymysql://root:root@mysql:3306/gold_db
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+
+    command: standalone
+
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  mysql:
+    image: mysql:8.0
+
+    container_name: mysql
+
+    restart: always
+
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: gold_db
+
+    ports:
+      - "3307:3306"
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+volumes:
+  mysql_data:
+

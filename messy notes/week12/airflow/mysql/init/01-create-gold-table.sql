@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS gold_db;
+
+USE gold_db;
+
+CREATE TABLE IF NOT EXISTS gold_prices (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    symbol VARCHAR(50) NOT NULL,
+    price FLOAT NOT NULL,
+    currency VARCHAR(20) NOT NULL,
+    timestamp DATETIME NOT NULL
+);
