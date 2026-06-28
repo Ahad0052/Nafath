@@ -20,7 +20,8 @@
     ├── Week8_PowerBI_TalabatDashboard.md
     ├── Week10_Statistics_WebScraping.md
     ├── Week11_ETL_Docker_Prefect.md
-    └── Week12_Airflow_Prefect_ETL.md
+    ├── Week12_Airflow_Prefect_ETL.md
+    └── Week13_MachineLearning.md
 ```
 
 ---
@@ -40,6 +41,7 @@
 | Week 10 | Statistics for AI (probability, regression, hypothesis testing) + Selenium web scraping | ✅ |
 | Week 11 | ETL Pipelines, Docker, Docker Compose, Prefect orchestration | ✅ |
 | Week 12 | Apache Airflow, Prefect + Docker, TRA Telecom Analytics Pipeline | ✅ |
+| Week 13 | Introduction to Machine Learning — Linear/Logistic Regression, KNN, K-Means, SVM, Decision Trees | ✅ |
 
 ---
 
@@ -177,6 +179,23 @@
 - Arabic sheet names — `pd.read_excel(sheet_name="التوظيف")` works natively in pandas
 - Two SQLite tables — `raw_telecom_data` (original) + `telecom_analytics` (with derived columns)
 - Airflow vs Prefect — DAG/flow, XCom/return values, setup complexity, best use cases
+
+### Week 13
+- What is ML — algorithms that learn from experience instead of following explicit rules
+- Supervised learning — regression & classification from labelled data; unsupervised learning — clustering & dimensionality reduction
+- ML workflow — EDA → feature engineering → model selection → train/test split → evaluate → tune → deploy
+- Bias-variance tradeoff — underfitting vs overfitting, `train_test_split`, `cross_val_score`
+- Linear regression — simple (`y = mx + b`) and multiple; metrics R², MSE, RMSE, MAE
+- Gradient descent — optimizing loss iteratively via gradients, `SGDRegressor`, learning rate & epochs
+- Regularization — Ridge (L2, shrinks coefficients) vs Lasso (L1, zeroes coefficients → feature selection)
+- Logistic regression — sigmoid function, binary classification, `predict()`, `predict_proba()`, insurance prediction task
+- Evaluation metrics — accuracy, precision, recall, F1, confusion matrix; macro vs micro averaging
+- K-Nearest Neighbors (KNN) — distance-based, majority vote, ALWAYS scale features first
+- K-Means clustering — unsupervised, centroids, inertia, elbow method for choosing K
+- PCA — dimensionality reduction, `explained_variance_ratio_`, speeds up training & reduces overfitting
+- Support Vector Machines (SVM) — maximum-margin hyperplane, support vectors, kernels (linear, rbf, poly)
+- Decision Trees — Gini/MSE split criteria, no scaling needed, feature importances, prone to overfitting
+- scaling rules: KNN & SVM are distance-based → must scale; Decision Trees split on thresholds → no scaling
 
 ---
 
